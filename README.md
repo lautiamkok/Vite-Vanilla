@@ -1,12 +1,14 @@
 # Vite Vanilla
 
-A vanilla setup for frontend web development and prototyping using Vite, Vue.js 3 and Windi CSS. Vue.js is optional.
+A vanilla setup for frontend web development and prototyping using Vite, Vue.js 3 and Windi CSS (or, Tailwind CSS). Vue.js is optional.
 
 For more on Vite, check out https://vitejs.dev/guide/ to get started. 
 
 For more on Vue.js, check out https://v3.vuejs.org/guide/introduction.html to get started. 
 
 For more on Windi CSS, check out https://windicss.org/guide/ to get started. 
+
+For more on Tailwind CSS, check out https://tailwindcss.com/docs to get started. 
 
 # Installing Dependencies
 
@@ -36,9 +38,9 @@ For more on Windi CSS, check out https://windicss.org/guide/ to get started.
 
     * http://localhost:3000/ for the Home page
 
-    * http://localhost:3000/about for the About page
+    * http://localhost:3000/about/ for the About page
 
-    Then start developing the rest of pages inside `/src/pages/` following these two preceding examples.
+    Then start developing the rest of pages in the root directory following these two preceding examples.
 
 # Building for Prototyping
 
@@ -52,10 +54,10 @@ For more on Windi CSS, check out https://windicss.org/guide/ to get started.
 
 # Static & Processed Asset Handling
 
-1. Use the `/src/assets/images/` folder for images that you want to be processed. Then in your HTML tags, use `@/assets/images/` to request your images, for example:
+1. Use the `/src/assets/images/` folder for images that you want to be processed. Then in your HTML tags, use `/assets/images/` to request your images, for example:
     
     ```
-    <img src="@/assets/images/...-unsplash.jpg">
+    <img src="/assets/images/...-unsplash.jpg">
     ```
 
 2. Use the `/public/static/` folder for images that you do NOT want to be processed. Then in your HTML tags, use `/static/` to request your images, for example:
