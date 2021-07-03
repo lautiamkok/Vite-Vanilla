@@ -65,3 +65,32 @@ For more on Tailwind CSS, check out https://tailwindcss.com/docs to get started.
     ```
     <img src="/static/...-unsplash.jpg">
     ```
+
+# Path Handling
+
+Vite does not support alias in `.html` files. So you only can use the following path alias in `.js` and `.vue` files:
+
+```
+// vite.config.js
+import { resolve } from 'path'
+export default {
+  resolve: {
+    alias: {
+      '~': resolve(__dirname, './'),
+      '@': resolve(__dirname, './src'),
+    },
+  }
+}
+```
+
+* `~` is pointed to the root directory
+
+* `@` is pointed to the `/src/` directory
+
+You can use them as follows:
+
+```
+// slots/slots.js
+import '~/style.css'
+import Emitter from '@/plugins/emitter.js'
+```

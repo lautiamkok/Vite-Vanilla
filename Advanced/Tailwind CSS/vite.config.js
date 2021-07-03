@@ -13,6 +13,9 @@ export default {
     alias: {
       // Remove this line on production.
       vue: 'vue/dist/vue.esm-bundler',
+
+      '~': resolve(__dirname, './'),
+      '@': resolve(__dirname, './src'),
     },
   },
 
@@ -22,7 +25,9 @@ export default {
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        about: resolve(__dirname, 'about/index.html')
+        about: resolve(__dirname, 'about/index.html'),
+        slots: resolve(__dirname, 'slots/index.html'),
+        states: resolve(__dirname, 'states/index.html')
       }
     }
   }

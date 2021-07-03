@@ -1,0 +1,29 @@
+<!doctype html>
+<html class="bg-green-500 bg-opacity-50">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="p-6 text-xl font-bold text-blue-500">States</h1>
+      <p>{{ store.state }}</p>
+      <h2>All Books ({{ totalBooks }})</h2>
+      <ul>
+        <li v-for="book in books" :key="book.id">
+          {{ book.title }}
+        </li>
+      </ul>
+
+      <h2>All Fictions ({{ totalFictions }})</h2>
+      <ul>
+        <li v-for="book in fictions" :key="book.id">
+          {{ book.title }}
+        </li>
+      </ul>
+    </div>
+    <script type="module" src="/states/states.js"></script>
+  </body>
+</html>

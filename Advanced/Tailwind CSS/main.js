@@ -2,13 +2,10 @@
 
 import 'tailwindcss/tailwind.css'
 import './style.css'
-
-import mitt from 'mitt'
-
 import { createApp } from 'vue'
 
 const App = {
-  data() {
+  data () {
     return {
       message: 'Hello World'
     }

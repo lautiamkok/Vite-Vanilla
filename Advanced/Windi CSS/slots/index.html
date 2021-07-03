@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="bg-red-500 bg-opacity-50">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="p-6 text-xl font-bold text-blue-500">Slots</h1>
+      <p>{{ message }}</p>
+
+      <p>Slots are like placeholders where you can insert contents into the child component from a parent component by using the "slot" element as the content distribution outlet. A slot can be created just like creating a component. Hence, every slot is just like a component, can have `props`, `data`, `created`, `watch`, `mounted` methods and properties. Slots are very useful when you need to use inline templates, instead of having your templates inside the child components.</p>
+
+      <h2>Passing Data to Slots</h2>
+      <p>An example of passing the data down to a slot by binding the data as an attribute.</p>
+      <p>Notice that the message data derives from the `message` data property in the parent scope.</p>
+
+      <message-props v-bind:message="'hello from parent!'">
+        <input type="text" v-model="message">
+      </message-props>
+
+      <h2>Destructuring Slot Props</h2>
+      <p>An example of getting the data from a slot.</p>
+      <p>Notice that the message data derives from the `message` data property in the slot scope.</p>
+
+      <message-data v-slot="{ message }">
+        <input type="text" v-model="message">
+        <p>{{ message }}</p>
+      </message-data>
+
+      <h2>Slot Data Receiver</h2>
+      <p>An example of passing the data down to a slot using an emitter (event bus) - Mitt.</p>
+      <p>Notice that the message data derives from the `message` data property in the slot scope.</p>
+
+      <message-receiver v-slot="{ message }">
+        <input type="text" v-model="message">
+        <p>{{ message }}</p>
+      </message-receiver>
+
+      <button
+        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        v-on:click.prevent="emitMessage"
+      >
+        Emit
+      </button>
+    </div>
+    <script type="module" src="/slots/slots.js"></script>
+  </body>
+</html>
