@@ -44,7 +44,7 @@ For more on Tailwind CSS, check out https://tailwindcss.com/docs to get started.
 
     * http://localhost:3000/states/ for examples of using [Vuex](https://v3.vuejs.org/guide/migration/introduction.html#vuex)
 
-    Then start developing the rest of pages in the root directory following these two preceding examples.
+    Then start developing the rest of pages in the root directory following these preceding examples.
 
 # Building for Prototyping
 
