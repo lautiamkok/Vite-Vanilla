@@ -40,6 +40,10 @@ For more on Tailwind CSS, check out https://tailwindcss.com/docs to get started.
 
     * http://localhost:3000/about/ for the About page
 
+    * http://localhost:3000/slots/ for examples of using [Vue slots](https://v3.vuejs.org/guide/component-slots.html)
+
+    * http://localhost:3000/states/ for examples of using [Vuex](https://v3.vuejs.org/guide/migration/introduction.html#vuex)
+
     Then start developing the rest of pages in the root directory following these two preceding examples.
 
 # Building for Prototyping
